@@ -2,25 +2,29 @@ import {Item, Menu} from "./menu";
 
 
 export  let menuData:Menu[]=[
-  new Menu('Inbox', 'pi pi-fw pi-sign-out','Inbox',[ ]),
-  new Menu('Policy', 'pi pi-fw pi-plus','',[new Item('Add',
+  new Menu('Home', 'pi pi-fw pi-home','Home',[new Item('About Loan',
 
-    'pi pi-fw pi-share-alt','Policy/Add'),
-    new Item('Edit','pi pi-fw pi-pencil','Policy/Edit'),
-    new Item('View','pi pi-fw pi-cog','Policy/View'),
-    new Item('Delete','pi pi-fw pi-key','Policy/Delete')
+    'pi pi-fw pi-share-alt','Home/About-Loan'),
+    new Item('About Offer','pi pi-fw pi-pencil','Home/About-Offer')
+
   ]),
 
-  new Menu('PolicyHolder', 'pi pi-fw pi-sign-out','PolicyHolder',[new Item('Add',
+  new Menu('Loan', 'pi pi-fw pi-plus','Loan',[new Item('Apply',
 
-    'pi pi-fw pi-share-alt','PolicyHolder/Add'),
-    new Item('Edit','pi pi-fw pi-pencil','PolicyHolder/Edit'),
-    new Item('View','pi pi-fw pi-cog','PolicyHolder/View'),
-    new Item('Delete','pi pi-fw pi-key','PolicyHolder/Delete')
-  ] ),
+    'pi pi-fw pi-share-alt','Loan/Apply'),
+    new Item('Eligibility Check','pi pi-fw pi-pencil','Loan/Eligibility-Check'),
+    new Item('Loan Status','pi pi-fw pi-cog','Loan/Loan-Status'),
+    new Item('Pay EMI','pi pi-fw pi-key','Loan/Pay-EMI')
+  ]),
 
-  new Menu('Vehicle', 'pi pi-fw pi-sign-out','Vehicle',[ ]),
-  new Menu('Report', 'pi pi-fw pi-sign-out','Report',[ ]),
-  new Menu('Dashboard', 'pi pi-fw pi-sign-out','Dashboard',[ ])
+ /* new Menu('Login', 'pi pi-fw pi-sign-in','Login',[ ] ),*/
+
+  new Menu('Notification', 'pi pi-fw pi-bell','Notification',[ ]),
+  new Menu('Admin', 'pi pi-fw pi-sign-out','Admin',[
+    new Item('Inbox','pi pi-fw pi-share-alt','Admin/Inbox'),
+    new Item('Alert','pi pi-fw pi-pencil','Admin/Alert'),
+    new Item('Report','pi pi-fw pi-cog','Admin/Report')
+  ]),
+
 
 ]
