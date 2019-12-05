@@ -7,6 +7,13 @@
         First Name
       </mat-placeholder>
       <input type="text" matInput [formControl]="firstName" />
+      <div [hidden]="firstName.valid" class="validation">
+        <div [hidden]="!firstName.hasError('required')">
+          First name is required.
+        </div>
+        <div [hidden]="!firstName.hasError('pattern')">
+          Not matching pattern.</div>
+      </div>
     </mat-form-field>
     <mat-form-field>
       <mat-placeholder>
@@ -14,6 +21,13 @@
         Last Name
       </mat-placeholder>
       <input type="text" matInput [formControl]="lastName" />
+      <div [hidden]="lastName.valid" class="validation">
+        <div [hidden]="!lastName.hasError('required')">
+          Last name is required.
+        </div>
+        <div [hidden]="!lastName.hasError('pattern')">
+          Not matching pattern.</div>
+      </div>
     </mat-form-field>
     <mat-form-field>
       <mat-placeholder>
@@ -21,6 +35,13 @@
         Email
       </mat-placeholder>
       <input type="text" matInput [formControl]="email" />
+      <div [hidden]="email.valid" class="validation">
+        <div [hidden]="!email.hasError('required')">
+          Email is required.
+        </div>
+        <div [hidden]="!email.hasError('pattern')">
+          Not matching pattern.</div>
+      </div>
     </mat-form-field>
     <mat-form-field>
       <mat-placeholder>
@@ -28,6 +49,13 @@
         User Name
       </mat-placeholder>
       <input type="text" matInput [formControl]="userName" />
+      <div [hidden]="userName.valid" class="validation">
+        <div [hidden]="!userName.hasError('required')">
+          User name is required.
+        </div>
+        <div [hidden]="!userName.hasError('pattern')">
+          Not matching pattern.</div>
+      </div>
     </mat-form-field>
     <mat-form-field>
       <mat-placeholder>
@@ -35,6 +63,25 @@
         Password
       </mat-placeholder>
       <input type="password" matInput  [formControl]="password"/>
+      <div [hidden]="password.valid" class="validation">
+        <div [hidden]="!password.hasError('required')">
+          Password is required.
+        </div>
+        <div [hidden]="!password.hasError('pattern')">
+          Not matching pattern.</div>
+      </div>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-placeholder>
+        <mat-icon>visibility_off</mat-icon>
+        Confirm Password
+      </mat-placeholder>
+      <input type="password" matInput validateEqual="password"  [formControl]="confirmPassword"/>
+      <div [hidden]="confirmPassword.valid" class="validation">
+        <div [hidden]="!confirmPassword.hasError('required')">
+          Confirm Password is required.
+        </div>
+      </div>
     </mat-form-field>
     <button mat-fab type="submit" color="primary" [disabled]="!regGroup.valid" >
       <mat-icon>lock_open</mat-icon>
