@@ -35,6 +35,13 @@ export class UserService {
 
     }
 
+  getBOAUser(userName):Observable<any>
+  {
+
+    return this.http.get("https://daimalerblog2019-cf.cfapps.io/findboauserbyname/"+userName);
+
+  }
+
 
 
 }
